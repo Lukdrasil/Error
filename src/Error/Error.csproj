@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>ElvenScript.Error</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>Lukáš Drábek</Authors>
         <Description>Knihovna pro správu výsledků v .NET.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

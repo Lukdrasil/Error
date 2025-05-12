@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Mannaz.Error;
+namespace ElvenScript.Error;
 
 public record Error(string Code, string Description, ErrorSeverity Severity = ErrorSeverity.Error) : BaseError(Code, Description)
 {

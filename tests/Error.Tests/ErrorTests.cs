@@ -1,4 +1,4 @@
-using Mannaz.Error;
+using ElvenScript.Error;
 
 namespace Tests.Common.Error;
 public class ErrorTests
@@ -7,7 +7,7 @@ public class ErrorTests
     public void ToProblemDetails_ShouldReturnCorrectProblemDetails_WithDefaultSeverity()
     {
         // Arrange  
-        var error = new Mannaz.Error.Error("ERR001", "Default error description");
+        var error = new ElvenScript.Error.Error("ERR001", "Default error description");
 
         // Act  
         var problemDetails = error.ToProblemDetails();
@@ -23,7 +23,7 @@ public class ErrorTests
     public void ToProblemDetails_ShouldReturnCorrectProblemDetails_WithWarningSeverity()
     {
         // Arrange
-        var error = new Mannaz.Error.Error("WARN001", "Warning description", ErrorSeverity.Warning);
+        var error = new ElvenScript.Error.Error("WARN001", "Warning description", ErrorSeverity.Warning);
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -39,7 +39,7 @@ public class ErrorTests
     public void ToProblemDetails_ShouldReturnCorrectProblemDetails_WithInfoSeverity()
     {
         // Arrange
-        var error = new Mannaz.Error.Error("INFO001", "Info description", ErrorSeverity.Info);
+        var error = new ElvenScript.Error.Error("INFO001", "Info description", ErrorSeverity.Info);
 
         // Act
         var problemDetails = error.ToProblemDetails();

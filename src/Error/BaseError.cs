@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Mannaz.Error;
+namespace ElvenScript.Error;
 
 public abstract record BaseError(string Code, string Description)
 {

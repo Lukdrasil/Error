@@ -1,4 +1,4 @@
-﻿namespace Mannaz.Error;
+﻿namespace ElvenScript.Error;
 
 public enum ErrorSeverity
 {
