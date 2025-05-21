@@ -2,8 +2,10 @@
 
 namespace ElvenScript.Error;
 
-public record Error(string Code, string Description, ErrorSeverity Severity = ErrorSeverity.Error) : BaseError(Code, Description)
+public record Error(string Code, ErrorSeverity Severity, string Description) : BaseError(Code, Description)
 {
+    public ErrorSeverity Severity { get; init; } = Severity;
+
     public override ProblemDetails ToProblemDetails()
     {
         return new ProblemDetails
