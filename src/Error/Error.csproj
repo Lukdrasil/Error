@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>ElvenScript.Error</PackageId>
-        <Version>0.0.3-beta</Version>
+        <Version>0.0.4-beta</Version>
         <Authors>Lukáš Drábek</Authors>
         <Description>Structured error management for .NET. Provides a consistent, extensible, and type-safe way to represent, build, and propagate errors in your applications and APIs.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
