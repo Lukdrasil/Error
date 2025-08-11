@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ElvenScript.Error;
+namespace Lukdrasil.Error;
 
 public abstract record BaseError(string Code, string Description)
 {

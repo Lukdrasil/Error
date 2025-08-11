@@ -1,6 +1,6 @@
-# ElvenScript.Error
+# Error
 
-ElvenScript.Error is an .NET  library for structured error and result management. 
+Error is an .NET  library for structured error and result management. 
 It provides a consistent, extensible, and type-safe way to represent, build, and propagate errors in your applications and APIs.
 
 ---
@@ -31,24 +31,24 @@ It provides a consistent, extensible, and type-safe way to represent, build, and
 
 ## Installation
 
-Add a reference to the `ElvenScript.Error` project or package in your solution:
+Add a reference to the `Lukdrasil.Error` project or package in your solution:
 ### If using as a project reference
 ```
-<PackageReference Include="ElvenScript.Error" Version="x.y.z" />
+<PackageReference Include="Lukdrasil.Error" Version="x.y.z" />
 ```
 Or clone the repository and add the project to your solution.
 ## Usage
 
 ### Basic Error Creation
 ```csharp
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 var error = new Error("ERR001", ErrorSeverity.Error, "Something went wrong");
 var problemDetails = error.ToProblemDetails();
 ```
 ### Error with Formatting
 ```csharp
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 var error = new Error(
     "ERR_FORMAT",
@@ -58,7 +58,7 @@ var error = new Error(
 ```
 ### Using ErrorBuilder (Fluent API)
 ```csharp
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 var error = new ErrorBuilder()
     .WithCode("ERR_USER")
@@ -68,7 +68,7 @@ var error = new ErrorBuilder()
 ```
 ### Using ErrorBuilder with Direct Text
 ```csharp
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 var error = new ErrorBuilder()
     .WithCode("ERR_CUSTOM")
@@ -79,7 +79,7 @@ var error = new ErrorBuilder()
 
 If you use a format string with placeholders but do not provide arguments, the builder will throw an `ArgumentException` with caller info:
 ```csharp
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 var error = new ErrorBuilder()
     .WithDescription("Field {0} is required");

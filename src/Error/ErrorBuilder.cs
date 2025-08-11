@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
-namespace ElvenScript.Error;
+namespace Lukdrasil.Error;
 
 public partial class ErrorBuilder
 {

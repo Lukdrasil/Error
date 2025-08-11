@@ -1,4 +1,4 @@
-﻿namespace ElvenScript.Error;
+﻿namespace Lukdrasil.Error;
 
 public enum ErrorSeverity
 {

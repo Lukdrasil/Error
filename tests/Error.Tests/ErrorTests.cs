@@ -1,4 +1,4 @@
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 namespace Tests.Common.Error;
 public class ErrorTests
@@ -7,7 +7,7 @@ public class ErrorTests
     public void ToProblemDetails_ShouldReturnCorrectProblemDetails_WithDefaultSeverity()
     {
         // Arrange
-        var error = new ElvenScript.Error.Error("ERR001", ErrorSeverity.Error, "Default error description");
+        var error = new Lukdrasil.Error.Error("ERR001", ErrorSeverity.Error, "Default error description");
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -23,7 +23,7 @@ public class ErrorTests
     public void ToProblemDetails_ShouldReturnCorrectProblemDetails_WithWarningSeverity()
     {
         // Arrange
-        var error = new ElvenScript.Error.Error("WARN001", ErrorSeverity.Warning, "Warning description");
+        var error = new Lukdrasil.Error.Error("WARN001", ErrorSeverity.Warning, "Warning description");
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -39,7 +39,7 @@ public class ErrorTests
     public void ToProblemDetails_ShouldReturnCorrectProblemDetails_WithInfoSeverity()
     {
         // Arrange
-        var error = new ElvenScript.Error.Error("INFO001", ErrorSeverity.Info, "Info description");
+        var error = new Lukdrasil.Error.Error("INFO001", ErrorSeverity.Info, "Info description");
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -56,7 +56,7 @@ public class ErrorTests
     {
         // Arrange
         var desc = string.Format("Error in field {0} at line {1}", "name", 42);
-        var error = new ElvenScript.Error.Error("ERR_FORMAT", ErrorSeverity.Error, desc);
+        var error = new Lukdrasil.Error.Error("ERR_FORMAT", ErrorSeverity.Error, desc);
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -73,7 +73,7 @@ public class ErrorTests
     {
         // Arrange
         var desc = string.Format("Error in field {0} at line {1}", "surname", 99);
-        var error = new ElvenScript.Error.Error("ERR_FORMAT2", ErrorSeverity.Warning, desc);
+        var error = new Lukdrasil.Error.Error("ERR_FORMAT2", ErrorSeverity.Warning, desc);
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -89,7 +89,7 @@ public class ErrorTests
     public void Constructor_WithoutCode_ShouldSetCodeToEmptyString()
     {
         // Arrange
-        var error = new ElvenScript.Error.Error(string.Empty, ErrorSeverity.Error, "Description only error");
+        var error = new Lukdrasil.Error.Error(string.Empty, ErrorSeverity.Error, "Description only error");
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -106,7 +106,7 @@ public class ErrorTests
     {
         // Arrange
         var desc = string.Format("Error in field {0}", "address");
-        var error = new ElvenScript.Error.Error(string.Empty, ErrorSeverity.Error, desc);
+        var error = new Lukdrasil.Error.Error(string.Empty, ErrorSeverity.Error, desc);
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -123,7 +123,7 @@ public class ErrorTests
     {
         // Arrange
         var desc = string.Format("Error in field {0}", "phone");
-        var error = new ElvenScript.Error.Error(string.Empty, ErrorSeverity.Info, desc);
+        var error = new Lukdrasil.Error.Error(string.Empty, ErrorSeverity.Info, desc);
 
         // Act
         var problemDetails = error.ToProblemDetails();
@@ -140,7 +140,7 @@ public class ErrorTests
     {
         // Arrange
         var desc = string.Format("Custom error at {0}", 123);
-        var error = new ElvenScript.Error.Error("ERR_CUSTOM", ErrorSeverity.Warning, desc);
+        var error = new Lukdrasil.Error.Error("ERR_CUSTOM", ErrorSeverity.Warning, desc);
 
         // Act
         var problemDetails = error.ToProblemDetails();

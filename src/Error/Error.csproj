@@ -1,20 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageId>ElvenScript.Error</PackageId>
-        <Version>0.0.4-beta</Version>
+        <PackageId>Lukdrasil.Error</PackageId>
+        <Version>1.0.0</Version>
         <Authors>Lukáš Drábek</Authors>
         <Description>Structured error management for .NET. Provides a consistent, extensible, and type-safe way to represent, build, and propagate errors in your applications and APIs.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/ElvenScript/Error</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/ElvenScript/Error</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Lukdrasil/Error</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Lukdrasil/Error</PackageProjectUrl>
         <PackageTags>error;builder;fluent;dotnet;aspnetcore;problem-details;validation</PackageTags>
         <Copyright>Copyright © 2025 Lukáš Drábek</Copyright>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

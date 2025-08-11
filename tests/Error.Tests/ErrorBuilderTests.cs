@@ -1,4 +1,4 @@
-using ElvenScript.Error;
+using Lukdrasil.Error;
 
 namespace Tests.Common.Error;
 
