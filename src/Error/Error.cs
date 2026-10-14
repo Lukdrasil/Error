@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 
 namespace Lukdrasil.Error;
 
@@ -8,11 +10,24 @@ public record Error(string Code, ErrorSeverity Severity, string Description) : B
 
     public override ProblemDetails ToProblemDetails()
     {
+        var status = ToHttpStatus(Severity);
+
         return new ProblemDetails
         {
-            Title = Code,
+            Title = string.IsNullOrWhiteSpace(Code) ? ReasonPhrases.GetReasonPhrase(status) : Code,
             Detail = Description,
-            Status = (int)Severity
+            Status = status
+        };
+    }
+
+    private static int ToHttpStatus(ErrorSeverity severity)
+    {
+        return severity switch
+        {
+            ErrorSeverity.Error => StatusCodes.Status500InternalServerError,
+            ErrorSeverity.Warning => StatusCodes.Status400BadRequest,
+            ErrorSeverity.Info => StatusCodes.Status400BadRequest,
+            _ => StatusCodes.Status500InternalServerError
         };
     }
 }
