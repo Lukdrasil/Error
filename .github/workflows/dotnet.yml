@@ -41,6 +41,6 @@ jobs:
         with:
           dotnet-version: '9.0'
       - name: Pack NuGet package
-        run: dotnet pack src/Error/Error.csproj --configuration Release
+        run: dotnet build src/Error/Error.csproj --configuration Release
       - name: Publish to NuGet
         run: dotnet nuget push src/Error/bin/Release/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
