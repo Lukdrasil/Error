@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>Lukdrasil.Error</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Lukáš Drábek</Authors>
         <Description>Structured error management for .NET. Provides a consistent, extensible, and type-safe way to represent, build, and propagate errors in your applications and APIs.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
